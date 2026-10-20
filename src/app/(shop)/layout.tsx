@@ -5,6 +5,7 @@ import { CartProvider } from "@/components/cart";
 import { SiteHeader } from "@/components/site-header";
 import { CategoryBar } from "@/components/category-bar";
 import { PageTracker } from "@/components/tracker";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export default async function ShopLayout({ children }: { children: React.ReactNode }) {
   const [settings, categories] = await Promise.all([
@@ -48,6 +49,7 @@ export default async function ShopLayout({ children }: { children: React.ReactNo
           © {new Date().getFullYear()} {settings.shopName}. All rights reserved.
         </div>
       </footer>
+      <WhatsAppButton />
     </CartProvider>
   );
 }
